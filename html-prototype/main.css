@@ -1,0 +1,43 @@
+table {
+  font-size: 12px;
+}
+
+.money {
+  text-align: right;
+}
+
+tr:nth-child(odd) .money:active {
+  animation-name: priceup;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+}
+
+tr:nth-child(even) .money:active {
+  animation-name: pricedown;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+}
+
+@keyframes priceup {
+  0% {
+    background: inhertit;
+  }
+  10% {
+    background: #2db34a;
+  }
+  100% {
+    background: inhertit;
+  }
+}
+
+@keyframes pricedown {
+  0% {
+    background: inhertit;
+  }
+  10% {
+    background: #fa8484;
+  }
+  100% {
+    background: inhertit;
+  }
+}
