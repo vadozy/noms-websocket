@@ -1,5 +1,13 @@
 table {
-  font-size: 12px;
+  font-size: 14px;
+}
+
+.header {
+  text-align: center;
+}
+
+main table {
+  margin: auto;
 }
 
 .money {
