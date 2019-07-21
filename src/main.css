@@ -1,0 +1,51 @@
+table {
+  font-size: 14px;
+}
+
+.header {
+  text-align: center;
+}
+
+main table {
+  margin: auto;
+}
+
+.money {
+  text-align: right;
+}
+
+tr .price-up {
+  animation-name: priceup;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+}
+
+tr .price-down {
+  animation-name: pricedown;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+}
+
+@keyframes priceup {
+  0% {
+    color: inhertit;
+  }
+  5% {
+    color: #06751e;
+  }
+  100% {
+    color: #02330c;
+  }
+}
+
+@keyframes pricedown {
+  0% {
+    color: inhertit;
+  }
+  5% {
+    color: #f70404;
+  }
+  100% {
+    color: #7c0303;
+  }
+}
