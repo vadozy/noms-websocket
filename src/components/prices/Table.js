@@ -2,7 +2,7 @@ import React from "react";
 import Tr from "./Tr";
 
 function Table(props) {
-  return <table class="pure-table pure-table-bordered">
+  return <table className="pure-table pure-table-bordered">
       <thead>
         <tr>
           <th>Symbol</th>
@@ -14,8 +14,8 @@ function Table(props) {
         </tr>
       </thead>
       <tbody>
-        {props.map(row => (
-          <Tr props = {row}></Tr>
+        {props.prices.map(row => (
+          <Tr key={row.symbol} {...row}></Tr>
         ))
         }
         

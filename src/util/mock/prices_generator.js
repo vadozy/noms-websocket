@@ -9,7 +9,7 @@ class Price {
   }
 }
 
-const NUMBER_OF_SECURITIES = 10;
+const NUMBER_OF_SECURITIES = 100;
 const LOWEST_PRICE = 250;
 const HIGHEST_PRICE = 300;
 const PRICE_ACCURACY = 2; // number of decimal digits 
