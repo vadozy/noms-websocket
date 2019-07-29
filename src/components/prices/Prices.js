@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Table from "./Table";
+import Table from "./Table";
 
 class Prices extends Component {
   state = {
@@ -26,7 +26,7 @@ class Prices extends Component {
   render() {
     return (
       <>
-        <div>TODO</div>
+        <Table props = {state}></Table>
       </>
     );
   }
