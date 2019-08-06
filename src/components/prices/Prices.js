@@ -17,6 +17,7 @@ class Prices extends Component {
       });
     }, 2000);
   }
+
   render() {
     return (
       <>

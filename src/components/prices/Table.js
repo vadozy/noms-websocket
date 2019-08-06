@@ -2,7 +2,8 @@ import React from "react";
 import Tr from "./Tr";
 
 function Table(props) {
-  return <table className="pure-table pure-table-bordered">
+  return (
+    <table className="pure-table pure-table-bordered">
       <thead>
         <tr>
           <th>Symbol</th>
@@ -15,12 +16,11 @@ function Table(props) {
       </thead>
       <tbody>
         {props.prices.map(row => (
-          <Tr key={row.symbol} {...row}></Tr>
-        ))
-        }
-        
+          <Tr key={row.symbol} {...row} />
+        ))}
       </tbody>
     </table>
+  );
 }
 
 export default Table;
