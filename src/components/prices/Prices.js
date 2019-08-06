@@ -15,7 +15,10 @@ class Prices extends Component {
       this.setState({
         prices: price_generator()
       });
-    }, 2000);
+      setTimeout(() => {
+        this.setState({...this.state});
+      }, 15000);
+    }, 20000);
   }
 
   render() {

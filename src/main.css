@@ -17,20 +17,20 @@ main table {
 tr .price-up {
   animation-name: priceup;
   animation-timing-function: ease-in-out;
-  animation-duration: 2s;
+  animation-duration: 10s;
 }
 
 tr .price-down {
   animation-name: pricedown;
   animation-timing-function: ease-in-out;
-  animation-duration: 3s;
+  animation-duration: 10s;
 }
 
 @keyframes priceup {
   0% {
     color: inhertit;
   }
-  5% {
+  1% {
     color: #06751e;
   }
   100% {
@@ -42,7 +42,7 @@ tr .price-down {
   0% {
     color: inhertit;
   }
-  5% {
+  1% {
     color: #f70404;
   }
   100% {
