@@ -17,8 +17,8 @@ class Prices extends Component {
       });
       setTimeout(() => {
         this.setState({...this.state});
-      }, 15000);
-    }, 20000);
+      }, 9000);
+    }, 10000);
   }
 
   render() {

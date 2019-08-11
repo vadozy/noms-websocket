@@ -30,10 +30,10 @@ function generate_random_price(symbol) {
   return ret;
 }
 
-module.exports = () => {
+module.exports = (s = 'ABC') => {
   const ret = [];
   for (let i = 1; i <= NUMBER_OF_SECURITIES; i++) {
-    ret.push(generate_random_price(`ABC${i}`));
+    ret.push(generate_random_price(`${s}${i}`));
   }
   return ret;
 }
