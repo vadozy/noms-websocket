@@ -2,6 +2,7 @@ const express = require("express");
 const http = require("http");
 const socketIo = require("socket.io");
 const generate_prices = require('../src/util/mock/prices_generator');
+const get_noms_prices = require('./noms');
 
 const port = 4242;
 const app = express();
@@ -17,6 +18,20 @@ const getPricesAndEmit = socket => {
     console.error(`Error: ${error.code}`);
   }
 };
+
+const getNomsPricesAndEmit = socket => {
+  get_noms_prices().then(data => {
+    // console.log(data);
+    const res = JSON.stringify(data);
+    try {
+      socket.emit("prices-API", res);
+    } catch (error) {
+      console.error(`Error: ${error.code}`);
+    }
+  });
+};
+
+
 
 io.on("connection", socket => {
   console.log("New client connected");
