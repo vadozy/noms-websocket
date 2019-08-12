@@ -35,8 +35,8 @@ const getNomsPricesAndEmit = socket => {
 
 io.on("connection", socket => {
   console.log("New client connected");
-  getPricesAndEmit(socket);
-  setInterval(() => getPricesAndEmit(socket),
+  getNomsPricesAndEmit(socket);
+  setInterval(() => getNomsPricesAndEmit(socket),
     10000
   );
   socket.on("disconnect", () => console.log("Client disconnected"));

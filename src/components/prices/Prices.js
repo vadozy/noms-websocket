@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Table from "./Table";
+import io from 'socket.io-client';
 const price_generator = require("../../util/mock/prices_generator");
 
 class Prices extends Component {
@@ -7,7 +8,7 @@ class Prices extends Component {
     prices: []
   };
 
-  componentDidMount() {
+  componentDidMount2() {
     this.setState({
       prices: price_generator()
     });
@@ -19,6 +20,19 @@ class Prices extends Component {
         this.setState({...this.state});
       }, 9000);
     }, 10000);
+  }
+
+  componentDidMount() {
+    const socket = io('http://localhost:4242');
+    socket.on('prices-API', data => {
+      //console.log(data);
+      this.setState({
+        prices: JSON.parse(data)
+      });
+      setTimeout(() => {
+        this.setState({...this.state});
+      }, 9000);
+    });
   }
 
   render() {
